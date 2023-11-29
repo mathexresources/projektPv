@@ -9,10 +9,9 @@ body {
     padding: 0;
 }
 
-img {
+#cat {
     height: 40%;
     width: 40%;
-    position: absolute;
 }
 
 header {
@@ -25,4 +24,25 @@ header {
 
 h1 {
     color: white;
+}
+
+#btn {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div {
+    text-align: center;
+}
+
+footer {
+    background-color: red;
+    color: #f06868;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
