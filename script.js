@@ -1,9 +1,15 @@
-let genBtn = document.getElementById("button3"); 
-element2.addEventListener("click", () => {
-    let cat_result = document.getElementById("cat");
-    fetch('https://aws.random.cat/meow')
-    .then(res => res.json())
+fetch('https://api.thecatapi.com/v1/images/search')
+    .then(response => response.json())
     .then(data => {
-        cat_result.setAttribute('src', data.file);
-    }
-)});
+        const catImageURL = data[0].url;
+        console.log(catImageURL);
+        const btn = document.getElementById('btn');
+        const catImage = document.getElementById('cat');
+
+        btn.addEventListener('click', () => {
+            catImage.src = catImageURL;
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
